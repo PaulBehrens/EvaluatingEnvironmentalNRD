@@ -1,0 +1,48 @@
+Workflow for diet paper
+
+General description
+________________________
+
+General flow:
+'a' scripts for extracting raw data and processing
+'b' scripts for comparisons of processed raw data
+'c' scripts construction of scenarios (create data for analysis)
+'d' scripts for analysis 
+
+Individual descriptions of core scripts
+_________________________
+
+a1_processFAO.m
+ - Extract raw FAO data from excel sheets
+ - Subtract wastes using percentages from literature
+
+a2_ImportExio.m
+ - Import exiobase into structure
+
+b1_ProcessNRD.m
+ - Process raw recommended diets and unify with FAO categories.
+
+c1_MakeDietVectors.m
+ - Create diets for the stimulus vector
+ 	1. An average diet less waste
+	2. Nationally recommended diet
+	3. Iso-caloric nationally recommended diet
+
+c2_MakeDietMatrix.m
+ - Apportion the diet vectors computed above to the domestic production and imports assuming the same proportions as current domestic/import values.
+
+c3_MakePrices.m
+ - Convert weight units into monetary units.
+
+d1_Analysis.m
+ - Compute impacts and output summary results.
+
+
+Individual descriptions of article-specific functions
+________________________________________________________
+
+NOTE: Article-specific functions are located in in '0. article_functions':
+
+
+
+TODO copy used but non article-specific functions from PAB drive.
